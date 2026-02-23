@@ -1,24 +1,107 @@
 
-<div class="section-main-page">
-  {% if section.settings.heading %}
-    <h2>{{ section.settings.heading }}</h2>
-  {% endif %}
-  <!-- Content for main-page -->
+<section>
+<!-- Hero Section: Split Layout -->
+<section class="flex flex-col md:flex-row min-h-[85vh] w-full items-stretch bg-background-light dark:bg-background-dark">
+<div class="w-full md:w-1/2 overflow-hidden relative min-h-[400px]">
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<img alt="Artisanal textile manufacturing process" class="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-1000" data-alt="Artisanal textile manufacturing process in India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCogIu7LIqJmTuRn6J_KJ-IkyF70rW9Bddm66xyN8izN6bwtz0GBxaC-T0IUob6O4ycLk4bGdMelWvSQ7NCcjN6Q1bl8BLI_ZQgkJKidk9VML-s6LrbZ0GY9R_5aQB8GcjI545kl6GxIJhKMxesouhQrk-uyITaTOAmK2eSHk4v5ja8Axwh5rUjOtAsj5T6SOne1nF-FEEaHjdwdXDZQFto_UXm4R2StS0OefIqH-k8zeKo8kJ-aT7ydI4MzykdPDDDCZcg_wvW3J8">
 </div>
+<div class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-20 py-16 bg-background-light dark:bg-background-dark">
+<span class="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-6">Established 2023</span>
+<h1 class="serif-heading text-5xl md:text-7xl lg:text-8xl leading-[1.1] mb-8 text-neutral-text dark:text-slate-100">
+                    OUR STORY:<br>
+<span class="italic font-normal">Made in India.</span><br>
+                    Made with Intent.
+                </h1>
+<p class="max-w-md text-lg text-neutral-text/70 dark:text-slate-400 font-light leading-relaxed">
+                    Crafting a new standard for the modern wardrobe with artisanal excellence and timeless silhouettes.
+                </p>
+</div>
+</section>
+<!-- Narrative Section: Centered Editorial -->
+<section class="py-24 md:py-40 px-6 md:px-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-2xl mx-auto text-center">
+<h2 class="serif-heading text-4xl md:text-5xl mb-12 text-neutral-text dark:text-slate-100">Adulting is hard</h2>
+<div class="space-y-8 text-lg md:text-xl text-neutral-text/80 dark:text-slate-300 font-light leading-loose text-justify md:text-center">
+<p>
+                        We believe that the clothes you wear should be the least of your worries. Our journey began with a simple observation: the transition into adulthood deserves a wardrobe that reflects responsibility, quality, and effortless style. 'The Just Adulting Club' was born from a desire to bridge the gap between fast fashion and unattainable luxury.
+                    </p>
+<p>
+                        Every stitch tells a story of heritage and intent. By partnering with master weavers across India, we ensure that every garment not only feels premium but carries the soul of the hands that made it. We choose natural fibers, ethical practices, and timeless silhouettes because we know that true sophistication lies in the details.
+                    </p>
+<p>
+                        In a world of fleeting trends, we build for longevity. Our pieces are designed to evolve with you, from the boardroom to the weekend gallery walk. This is clothing for the intentional adult—someone who values where their clothes come from as much as how they look.
+                    </p>
+</div>
+<div class="mt-16 inline-block">
+<div class="h-px w-24 bg-primary mx-auto mb-4"></div>
+<span class="text-primary font-serif italic text-lg italic tracking-wide">The Founders</span>
+</div>
+</div>
+</section>
+<!-- Lifestyle Break: Full Width Photo -->
+<section class="w-full h-[60vh] md:h-[80vh] overflow-hidden">
+<img alt="Minimalist lifestyle scene showing brand aesthetic" class="w-full h-full object-cover object-center" data-alt="Minimalist high-end lifestyle fashion shoot background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCws1nzzh8Gl_wEs8GufBrGEUrJeqisNaFqGst-ZwIeI72EjjBheqDHW1_V5_nIM--VjZ85jHe-xvF3Eqkr6P0gi5010RBL3hyt_mqFKltFVBC4Wz-04lvj1WMGWp6x_wbvYVs__thAsMQOdYxjBdj9Mjoyr-dA2uyBU7nKheNpv_C0PR7K3CjPNzXd6hr2k4S3HpxIw34B6YAiQGKN4APHH5xaZIxumvtwlFt8AiDl8wg_qMm21AdBFW4p5mg9ehE-eZue2vMkUtY">
+</section>
+<!-- Features Grid: Value Propositions -->
+<section class="py-24 px-6 md:px-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+<!-- Feature 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="mb-6 p-6 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="eco">eco</span>
+</div>
+<h3 class="font-display font-bold text-xl mb-4 tracking-tight uppercase">100% Natural Fibers</h3>
+<p class="text-neutral-text/60 dark:text-slate-400 leading-relaxed font-light">
+                        We prioritize organic cotton, Belgian linen, and recycled wool. Breathable, durable, and biodegradable materials only.
+                    </p>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="mb-6 p-6 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="handshake">handshake</span>
+</div>
+<h3 class="font-display font-bold text-xl mb-4 tracking-tight uppercase">Ethically Sourced</h3>
+<p class="text-neutral-text/60 dark:text-slate-400 leading-relaxed font-light">
+                        Direct partnerships with artisanal communities in India. Fair wages, safe conditions, and complete transparency.
+                    </p>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="mb-6 p-6 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="science">science</span>
+</div>
+<h3 class="font-display font-bold text-xl mb-4 tracking-tight uppercase">Anti-Odour Tech</h3>
+<p class="text-neutral-text/60 dark:text-slate-400 leading-relaxed font-light">
+                        Innovative silver-ion finishes and natural weaves that keep you fresh throughout a demanding adult schedule.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Footer Call to Action -->
+<section class="py-20 border-t border-primary/10 bg-background-light dark:bg-background-dark flex flex-col items-center">
+<h4 class="serif-heading text-3xl mb-8">Ready to join the club?</h4>
+<a class="inline-flex items-center justify-center h-12 px-10 rounded-full bg-primary text-white font-display font-bold text-sm tracking-widest uppercase hover:bg-primary/90 transition-all transform hover:-translate-y-0.5" href="{{ routes.all_products_collection_url }}">
+                Explore the Collection
+            </a>
+</section>
+</section>
+
 {% schema %}
 {
-  "name": "main page",
+  "name": "Page Content",
+  "tag": "section",
   "settings": [
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "main page"
+      "default": "Page"
     }
   ],
   "presets": [
     {
-      "name": "main page"
+      "name": "Page Content"
     }
   ]
 }

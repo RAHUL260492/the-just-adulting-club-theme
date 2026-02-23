@@ -4,7 +4,8 @@
     "theme_name": "The Just Adulting Club",
     "theme_author": "Stitch Agent",
     "theme_version": "1.0.0",
-    "theme_support_email": "support@example.com"
+    "theme_support_email": "support@example.com",
+    "theme_documentation_url": "https://help.shopify.com/manual"
   },
   {
     "name": "Colors",

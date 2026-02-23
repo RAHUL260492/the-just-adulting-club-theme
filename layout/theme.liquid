@@ -45,8 +45,8 @@
   
   {% section 'footer' %}
   
-  {{ 'theme.js' | asset_url | script_tag }}
-  {{ 'cart.js' | asset_url | script_tag }}
-  {{ 'predictive-search.js' | asset_url | script_tag }}
+  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  <script src="{{ 'cart.js' | asset_url }}" defer></script>
+  <script src="{{ 'predictive-search.js' | asset_url }}" defer></script>
 </body>
 </html>

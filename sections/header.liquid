@@ -1,0 +1,53 @@
+
+<header class="sticky-header">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-tight uppercase">
+<a class="hover:text-primary transition-colors" href="#">New Arrivals</a>
+<a class="hover:text-primary transition-colors" href="#">Shop All</a>
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+</nav>
+<!-- Logo -->
+<div class="flex flex-col items-center">
+<h1 class="serif-heading text-2xl lg:text-3xl font-bold tracking-tighter text-primary">
+                    {{ shop.name }}
+                </h1>
+</div>
+<!-- Icons/Utilities -->
+<div class="flex items-center gap-6">
+<button class="flex items-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button class="flex items-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+<button class="relative flex items-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center font-bold">2</span>
+</button>
+<button class="lg:hidden flex items-center">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}

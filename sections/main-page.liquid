@@ -1,0 +1,25 @@
+
+<div class="section-main-page">
+  {% if section.settings.heading %}
+    <h2>{{ section.settings.heading }}</h2>
+  {% endif %}
+  <!-- Content for main-page -->
+</div>
+{% schema %}
+{
+  "name": "main page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "main page"
+    }
+  ],
+  "presets": [
+    {
+      "name": "main page"
+    }
+  ]
+}
+{% endschema %}

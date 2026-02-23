@@ -1,0 +1,41 @@
+
+<section class="relative h-[85vh] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Elegant lifestyle image of sophisticated apparel in sunlight" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDwegRXmt-SBSSfkSFfm_OBAhQrR_pK0m9Lu855BS7lVGjagLHQeDW0I_5hMfhzb3lhzQJT95i0CNOga1RCjnCYgTbdvSfkvQsmgYtiHvxdxXkfyZqMjKX54YmzsdI09IfLkpl9-whJJBRWlHpKgIlbn9aD578cvXaqy6O9fhI0--2jhfcOD1YJPLfq4usgBtCSH3vtWTKWiHNK7nBue7BIhDwWQhhJfQzWReza_jXkDqZd83X6G27tZi1KFFrxWssBd3xj63Onsg');">
+</div>
+<div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+<h2 class="serif-heading text-white text-5xl md:text-7xl mb-6 max-w-4xl leading-tight">
+                Crafted for the Life You're Building
+            </h2>
+<p class="text-white text-lg md:text-xl font-light mb-10 max-w-2xl">
+                Elevated essentials designed for those who navigate the world with intentionality and ease.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all">
+                    Shop Men
+                </button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all">
+                    Shop Women
+                </button>
+</div>
+</div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Crafted for the Life You're Building"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

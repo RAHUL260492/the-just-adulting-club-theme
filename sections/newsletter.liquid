@@ -1,0 +1,36 @@
+
+<section class="bg-primary py-24 px-6">
+<div class="max-w-4xl mx-auto text-center text-white">
+<h3 class="serif-heading text-4xl md:text-5xl font-bold mb-6">Join The Club</h3>
+<p class="text-lg mb-10 opacity-90 max-w-xl mx-auto">
+                Subscribe for early access to collection drops, editorial content, and exclusive club pricing.
+            </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-1 bg-white/10 border border-white/30 rounded px-6 py-4 text-white placeholder:text-white/60 focus:ring-0 focus:border-white transition-all outline-none" placeholder="Email Address" type="email">
+<button class="bg-white text-primary px-8 py-4 rounded font-bold uppercase tracking-widest text-xs hover:bg-background-light transition-colors shadow-lg" type="submit">
+                    Subscribe
+                </button>
+</form>
+<p class="mt-6 text-[10px] opacity-60 uppercase tracking-widest">By signing up you agree to our Privacy Policy</p>
+</div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Join The Club"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

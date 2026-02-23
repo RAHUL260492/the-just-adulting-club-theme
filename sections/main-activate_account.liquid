@@ -1,0 +1,25 @@
+
+<div class="section-main-activate_account">
+  {% if section.settings.heading %}
+    <h2>{{ section.settings.heading }}</h2>
+  {% endif %}
+  <!-- Content for main-activate_account -->
+</div>
+{% schema %}
+{
+  "name": "main activate_account",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "main activate_account"
+    }
+  ],
+  "presets": [
+    {
+      "name": "main activate_account"
+    }
+  ]
+}
+{% endschema %}

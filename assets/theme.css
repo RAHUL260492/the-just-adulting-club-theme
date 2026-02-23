@@ -1,0 +1,15 @@
+
+:root {
+    --color-primary: {{ settings.color_primary }};
+    --color-background-light: {{ settings.color_background_light }};
+    --color-background-dark: {{ settings.color_background_dark }};
+    --color-surface: {{ settings.color_surface }};
+    --color-accent-text: {{ settings.color_accent_text }};
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--color-accent-text);
+}
+.serif-heading {
+    font-family: 'Playfair Display', serif;
+}

@@ -1,0 +1,45 @@
+
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-primary/60 mb-4">local_shipping</span>
+<h6 class="font-bold uppercase tracking-widest text-xs mb-2">Global Shipping</h6>
+<p class="text-xs text-slate-500">Premium tracking included</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-primary/60 mb-4">verified</span>
+<h6 class="font-bold uppercase tracking-widest text-xs mb-2">Ethical Sourcing</h6>
+<p class="text-xs text-slate-500">Fair trade certified factories</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-primary/60 mb-4">cyclone</span>
+<h6 class="font-bold uppercase tracking-widest text-xs mb-2">Easy Returns</h6>
+<p class="text-xs text-slate-500">30-day hassle-free policy</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-primary/60 mb-4">loyalty</span>
+<h6 class="font-bold uppercase tracking-widest text-xs mb-2">Club Rewards</h6>
+<p class="text-xs text-slate-500">Earn points on every shop</p>
+</div>
+</div>
+</section>
+
+{% schema %}
+{
+  "name": "Multicolumn",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Features"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multicolumn"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,58 @@
+
+<section class="bg-surface dark:bg-primary/5 py-24">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+<div class="order-2 lg:order-1">
+<span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">Our Philosophy</span>
+<h3 class="serif-heading text-4xl md:text-5xl font-bold mb-8 leading-tight">Sophistication is in the Details.</h3>
+<p class="text-slate-600 dark:text-slate-300 text-lg mb-8 leading-relaxed italic font-light">
+                    "We believe that adulting doesn't mean compromising on style or comfort. Our garments are engineered for the transitions of modern life—from morning meetings to evening cocktails, crafted with fibers that breathe and technology that lasts."
+                </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">eco</span>
+<div>
+<h5 class="font-bold text-sm uppercase">100% Natural Fibers</h5>
+<p class="text-sm text-slate-500">Sustainably sourced cotton, linen, and wool.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">science</span>
+<div>
+<h5 class="font-bold text-sm uppercase">Anti-Odour Tech</h5>
+<p class="text-sm text-slate-500">Silver-ion treatment to keep you fresh all day.</p>
+</div>
+</div>
+</div>
+<button class="border-b-2 border-primary pb-1 text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Learn Our Story</button>
+</div>
+<div class="order-1 lg:order-2">
+<div class="relative">
+<img alt="Designer at work" class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Monochrome image of professional tailor working on fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIg_ksuP_CYJBi9ioJD_uJNnXVV5e7lQt9PJsCTHKGMuP_eq8qJGzZWLg1NMvxEEObz8bdQ3fGfCPM2uMKNrUIMiQDhHGmUrzxK4kjUL5EA7vq_3_6GLmzVqQ96QcAijwLg7H7JnKAdNAwQ40lunuBLzOaJ5b9c2Wl0g0WOHkV3l5MZlwi3d2YGIgb_VsKwh6tK6yufrXMaaM3U3u5_9QVusRMB1KS8WFEWeRYNaYpkDJ45oyhXb2sZK-o7XQed11EzEHzbnYLP2M">
+<div class="absolute -bottom-8 -left-8 bg-white dark:bg-background-dark p-6 shadow-xl rounded-lg hidden md:block max-w-[200px]">
+<p class="serif-heading text-3xl font-bold text-primary italic">Est. 2024</p>
+<p class="text-xs uppercase tracking-tighter text-slate-400">Founded on intentionality</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Sophistication is in the Details."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text"
+    }
+  ]
+}
+{% endschema %}

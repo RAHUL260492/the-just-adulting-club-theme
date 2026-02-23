@@ -1,0 +1,54 @@
+
+<section>
+<div class="max-w-2xl w-full text-center space-y-8">
+<!-- Hero Section -->
+<div class="space-y-4">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Error 404</span>
+<h1 class="text-brand-dark dark:text-slate-100 text-5xl md:text-7xl serif-text font-medium leading-tight">
+                    Well, this is awkward.
+                </h1>
+<p class="text-brand-dark/60 dark:text-slate-400 text-lg md:text-xl font-light max-w-lg mx-auto leading-relaxed">
+                    The page you're looking for doesn't exist – kind of like our motivation on Monday mornings.
+                </p>
+</div>
+<!-- Minimalist Search Section -->
+<div class="max-w-md mx-auto mt-12">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-brand-dark/30 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="w-full bg-white dark:bg-slate-800 border border-brand-dark/10 dark:border-slate-700 rounded-lg py-4 pl-12 pr-4 text-brand-dark dark:text-slate-100 placeholder:text-brand-dark/30 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-sm" placeholder="Search for your next favorite piece..." type="text">
+</div>
+</div>
+<!-- CTA Section -->
+<div class="pt-6">
+<a class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-bold tracking-wide transition-all transform hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-primary/20" href="#">
+                    Back to Home
+                </a>
+</div>
+<!-- Graphic Element -->
+<div class="pt-12 opacity-10 flex justify-center">
+<span class="material-symbols-outlined text-9xl">sentiment_dissatisfied</span>
+</div>
+</div>
+</section>
+
+{% schema %}
+{
+  "name": "404 Page",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Page Not Found"
+    }
+  ],
+  "presets": [
+    {
+      "name": "404 Page"
+    }
+  ]
+}
+{% endschema %}

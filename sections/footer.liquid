@@ -3,7 +3,7 @@
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 <div class="col-span-1 lg:col-span-1">
 <h1 class="serif-heading text-xl font-bold tracking-tighter text-primary mb-6">
-                    The Just Adulting Club
+                    {{ shop.name }}
                 </h1>
 <p class="text-sm text-slate-500 leading-relaxed mb-6">
                     Sophisticated apparel designed for intentional living. Elevating the standard of everyday essentials through natural fibers and modern tech.
@@ -17,10 +17,10 @@
 <div>
 <h6 class="font-bold text-xs uppercase tracking-widest mb-6">Shop</h6>
 <ul class="space-y-4 text-sm text-slate-500">
-<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">The Office Edit</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Essentials</a></li>
+<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}?sort_by=created-descending">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}?sort_by=best-selling">Best Sellers</a></li>
+<li><a class="hover:text-primary transition-colors" href="{{ routes.collections_url }}">The Office Edit</a></li>
+<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Essentials</a></li>
 </ul>
 </div>
 <div>
@@ -43,7 +43,7 @@
 </div>
 </div>
 <div class="max-w-7xl mx-auto pt-8 border-t border-primary/5 flex flex-col md:flex-row items-center justify-between gap-4">
-<p class="text-[10px] uppercase tracking-widest text-slate-400">© 2024 The Just Adulting Club. All rights reserved.</p>
+<p class="text-[10px] uppercase tracking-widest text-slate-400">© {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
 <div class="flex gap-6">
 <a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-primary" href="#">Privacy</a>
 <a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-primary" href="#">Terms</a>

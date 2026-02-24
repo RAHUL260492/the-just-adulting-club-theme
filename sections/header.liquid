@@ -1,36 +1,50 @@
 
-<header class="sticky-header">
+<header class="border-b border-primary/10 bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 lg:px-20 py-4">
 <div class="max-w-7xl mx-auto flex items-center justify-between">
-<!-- Navigation Links -->
-<nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-tight uppercase">
+<div class="flex items-center gap-12">
+<a href="{{ routes.root_url }}" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">park</span>
+<h1 class="text-xl font-bold tracking-tight serif-heading">{{ shop.name }}</h1>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Shop</a>
 <a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}?sort_by=created-descending">New Arrivals</a>
-<a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Shop All</a>
-<a class="hover:text-primary transition-colors" href="{{ routes.collections_url }}">Collections</a>
+<a class="hover:text-primary transition-colors" href="/blogs/journal">Journal</a>
+<a class="hover:text-primary transition-colors" href="/pages/about">About</a>
 </nav>
-<!-- Logo -->
-<div class="flex flex-col items-center">
-<a href="{{ routes.root_url }}" class="serif-heading text-2xl lg:text-3xl font-bold tracking-tighter text-primary">
-                    {{ shop.name }}
-                </a>
 </div>
-<!-- Icons/Utilities -->
 <div class="flex items-center gap-6">
-<a href="{{ routes.search_url }}" class="flex items-center hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-2xl">search</span>
+<div class="hidden lg:flex items-center bg-primary/5 rounded-full px-4 py-1.5 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-sm mr-2">search</span>
+<a href="{{ routes.search_url }}"><input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-brand-text/40 cursor-pointer" placeholder="Search collection..." type="text" readonly onclick="window.location='{{ routes.search_url }}'"/></a>
+</div>
+<a href="{{ routes.cart_url }}" class="relative hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">{{ cart.item_count }}</span>
 </a>
-<a href="{{ routes.account_login_url }}" class="flex items-center hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-2xl">person</span>
+<a href="{{ routes.account_login_url }}" class="hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
 </a>
-<a href="{{ routes.cart_url }}" class="relative flex items-center hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-2xl">shopping_bag</span>
-<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center font-bold">{{ cart.item_count }}</span>
-</a>
-<button class="lg:hidden flex items-center">
+<button class="md:hidden hover:text-primary transition-colors" id="mobile-menu-toggle">
 <span class="material-symbols-outlined text-2xl">menu</span>
 </button>
 </div>
 </div>
+<!-- Mobile Navigation -->
+<nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-primary/10 mt-4">
+<div class="flex flex-col gap-4 text-sm font-medium uppercase tracking-widest">
+<a class="hover:text-primary transition-colors py-2" href="{{ routes.all_products_collection_url }}">Shop</a>
+<a class="hover:text-primary transition-colors py-2" href="{{ routes.all_products_collection_url }}?sort_by=created-descending">New Arrivals</a>
+<a class="hover:text-primary transition-colors py-2" href="/blogs/journal">Journal</a>
+<a class="hover:text-primary transition-colors py-2" href="/pages/about">About</a>
+</div>
+</nav>
 </header>
+<script>
+  document.getElementById('mobile-menu-toggle')?.addEventListener('click', function() {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>
 
 {% schema %}
 {

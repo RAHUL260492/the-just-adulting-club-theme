@@ -1,53 +1,48 @@
 
-<footer class="bg-background-light dark:bg-background-dark pt-20 pb-12 px-6 border-t border-primary/5">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<div class="col-span-1 lg:col-span-1">
-<h1 class="serif-heading text-xl font-bold tracking-tighter text-primary mb-6">
-                    {{ shop.name }}
-                </h1>
-<p class="text-sm text-slate-500 leading-relaxed mb-6">
-                    Sophisticated apparel designed for intentional living. Elevating the standard of everyday essentials through natural fibers and modern tech.
-                </p>
-<div class="flex gap-4">
-<a class="text-slate-400 hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}"><span class="material-symbols-outlined">public</span></a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}"><span class="material-symbols-outlined">camera</span></a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}"><span class="material-symbols-outlined">alternate_email</span></a>
+<footer class="bg-primary/5 border-t border-primary/10 mt-32 py-20 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">park</span>
+<h2 class="text-lg font-bold tracking-tight serif-heading">{{ shop.name }}</h2>
 </div>
+<p class="text-sm text-brand-text/60 leading-relaxed">Elevated essentials for the modern adult. We believe in quality, longevity, and intentional living.</p>
 </div>
 <div>
-<h6 class="font-bold text-xs uppercase tracking-widest mb-6">Shop</h6>
-<ul class="space-y-4 text-sm text-slate-500">
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}?sort_by=created-descending">New Arrivals</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}?sort_by=best-selling">Best Sellers</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.collections_url }}">The Office Edit</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Essentials</a></li>
+<h5 class="text-xs uppercase tracking-[0.2em] font-bold mb-6">Explore</h5>
+<ul class="space-y-4 text-sm text-brand-text/70">
+<li><a class="hover:text-primary transition-colors" href="/pages/about">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="/pages/about">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Shop All</a></li>
+<li><a class="hover:text-primary transition-colors" href="{{ routes.collections_url }}">Collections</a></li>
 </ul>
 </div>
 <div>
-<h6 class="font-bold text-xs uppercase tracking-widest mb-6">Club Services</h6>
-<ul class="space-y-4 text-sm text-slate-500">
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Shipping &amp; Returns</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Size Guide</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Track Your Order</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Care Instructions</a></li>
+<h5 class="text-xs uppercase tracking-[0.2em] font-bold mb-6">Customer Care</h5>
+<ul class="space-y-4 text-sm text-brand-text/70">
+<li><a class="hover:text-primary transition-colors" href="/pages/contact">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="/pages/contact">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="/pages/contact">Size Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="{{ routes.account_login_url }}">Track Your Order</a></li>
 </ul>
 </div>
 <div>
-<h6 class="font-bold text-xs uppercase tracking-widest mb-6">The Brand</h6>
-<ul class="space-y-4 text-sm text-slate-500">
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Our Story</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Sustainability</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Affiliate Program</a></li>
-<li><a class="hover:text-primary transition-colors" href="{{ routes.all_products_collection_url }}">Contact Us</a></li>
-</ul>
+<h5 class="text-xs uppercase tracking-[0.2em] font-bold mb-6">Join the Club</h5>
+<p class="text-xs text-brand-text/60 mb-4">Sign up for early access and seasonal updates.</p>
+{% form 'customer', id: 'footer-newsletter' %}
+<div class="flex border-b border-primary/40 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-grow placeholder:text-brand-text/30" placeholder="email@address.com" type="email" name="contact[email]" required/>
+<button type="submit" class="text-xs font-bold uppercase tracking-widest text-primary">Join</button>
+</div>
+{% endform %}
 </div>
 </div>
-<div class="max-w-7xl mx-auto pt-8 border-t border-primary/5 flex flex-col md:flex-row items-center justify-between gap-4">
-<p class="text-[10px] uppercase tracking-widest text-slate-400">© {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] uppercase tracking-widest text-brand-text/40">© {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
 <div class="flex gap-6">
-<a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-primary" href="{{ routes.all_products_collection_url }}">Privacy</a>
-<a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-primary" href="{{ routes.all_products_collection_url }}">Terms</a>
-<a class="text-[10px] uppercase tracking-widest text-slate-400 hover:text-primary" href="{{ routes.all_products_collection_url }}">Accessibility</a>
+<a class="text-brand-text/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-brand-text/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">local_florist</span></a>
+<a class="text-brand-text/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">camera_indoor</span></a>
 </div>
 </div>
 </footer>

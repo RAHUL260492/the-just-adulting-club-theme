@@ -1,24 +1,44 @@
 
-<div class="section-product-recommendations">
-  {% if section.settings.heading %}
-    <h2>{{ section.settings.heading }}</h2>
-  {% endif %}
-  <!-- Content for product-recommendations -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 border-t border-primary/10 mt-16">
+<div class="flex items-end justify-between mb-12">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Your Picks</span>
+<h2 class="font-serif text-4xl">Complete the Look</h2>
 </div>
+<a class="hidden sm:flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b-2 border-primary pb-1" href="{{ routes.all_products_collection_url }}">View Collection</a>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+{% assign rec_collection = collections['all'] %}
+{% for product in rec_collection.products limit: 4 %}
+  {% unless product.handle == page.handle %}
+  <div class="group cursor-pointer">
+  <a href="{{ product.url }}" class="relative block aspect-[3/4] overflow-hidden rounded-xl bg-white mb-4 shadow-sm">
+  <img alt="{{ product.title | escape }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="{{ product.featured_image | image_url: width: 400 }}" width="400" height="533" loading="lazy">
+  <span class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur py-3 rounded-lg text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all text-center block">View Product</span>
+  </a>
+  <h4 class="font-bold text-sm">{{ product.title }}</h4>
+  <p class="text-brand-text/50 text-sm">{{ product.price | money }}</p>
+  </div>
+  {% endunless %}
+{% endfor %}
+</div>
+</section>
+
 {% schema %}
 {
-  "name": "product recommendations",
+  "name": "Product Recommendations",
+  "tag": "section",
   "settings": [
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "product recommendations"
+      "default": "Complete the Look"
     }
   ],
   "presets": [
     {
-      "name": "product recommendations"
+      "name": "Product Recommendations"
     }
   ]
 }

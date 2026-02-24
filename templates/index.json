@@ -1,18 +1,30 @@
 {
   "sections": {
-    "main": {
+    "hero": {
       "type": "hero-banner"
     },
-    "features": {
+    "featured": {
       "type": "featured-collection"
+    },
+    "about": {
+      "type": "image-with-text"
+    },
+    "collections": {
+      "type": "collection-list"
+    },
+    "testimonials": {
+      "type": "testimonials"
     },
     "newsletter": {
       "type": "newsletter"
     }
   },
   "order": [
-    "main",
-    "features",
+    "hero",
+    "featured",
+    "about",
+    "collections",
+    "testimonials",
     "newsletter"
   ]
 }

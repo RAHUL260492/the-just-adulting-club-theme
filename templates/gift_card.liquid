@@ -1,1 +1,25 @@
-<div>Gift Card</div>
+<div class="text-center max-w-xl mx-auto py-20">
+  <h1 class="serif-heading text-4xl mb-4">{{ 'gift_cards.issued.title' | t }}</h1>
+  <p class="text-brand-text/60 mb-8">Here's your gift card</p>
+  
+  {% if gift_card.enabled %}
+    <div class="bg-primary/5 border border-primary/20 rounded-xl p-8 mb-8">
+      {% if gift_card.image %}
+        <img src="{{ gift_card.image | image_url: width: 400 }}" alt="Gift card" class="mx-auto mb-6 rounded-lg" width="400" height="260" loading="lazy">
+      {% endif %}
+      <p class="text-3xl font-bold text-primary mb-4">{{ gift_card.balance | money }}</p>
+      <p class="text-lg font-mono tracking-widest">{{ gift_card.code }}</p>
+    </div>
+    <p class="text-sm text-brand-text/50">
+      {% if gift_card.expires_on %}
+        Expires {{ gift_card.expires_on | date: "%B %d, %Y" }}
+      {% else %}
+        No expiration date
+      {% endif %}
+    </p>
+  {% endif %}
+  
+  <a href="{{ routes.root_url }}" class="inline-block mt-8 bg-primary text-white font-bold py-3 px-8 rounded-lg uppercase tracking-widest text-xs hover:bg-primary/90 transition-all">
+    Continue Shopping
+  </a>
+</div>

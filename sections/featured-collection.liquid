@@ -8,30 +8,23 @@
 <a class="text-sm font-bold uppercase tracking-widest border-b border-primary pb-1 hover:text-primary transition-colors" href="{{ routes.collections_url }}">View All Collections</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Collection Card 1 -->
-<a href="{{ routes.all_products_collection_url }}" class="group cursor-pointer block">
+{% for collection in collections limit: 3 %}
+{% unless collection.handle == 'all' or collection.handle == 'frontpage' %}
+<a href="{{ collection.url }}" class="group cursor-pointer block">
 <div class="aspect-[3/4] overflow-hidden mb-4 rounded-lg bg-surface">
-<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Professional office attire styled for productivity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMujWg9JDDrmEeiGZcTH0taVc0DwVbwgDtnxws8rWS9YgQ3RmCilx95INny8auUnBniE_f6N1HX9QJ7_phB1qui0XHDyFlzBMOmqBB1FfO0rEUR2bYLktOugZdrqqZKRK7vBTAnkRSryjfi3jgFu4Q47a5MmHbFZ1xObc1oepN8285oov_paQLV_Iv3TAOTwPbozExB53foDRVQU9n3_NK69h8tL1KIJpGD3oCODGybgvFmYW7yZC_3KPPo1P-ifY_2iugd4eZQK0">
+{% if collection.image %}
+<img alt="{{ collection.title | escape }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="{{ collection.image | image_url: width: 600 }}" width="600" height="800" loading="lazy">
+{% else %}
+<div class="w-full h-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-6xl">collections_bookmark</span>
 </div>
-<h4 class="serif-heading text-xl font-bold mb-1 group-hover:text-primary transition-colors">The Work-Life Balance</h4>
-<p class="text-slate-500 text-sm font-medium uppercase tracking-wider">Tailored for the modern office</p>
-</a>
-<!-- Collection Card 2 -->
-<a href="{{ routes.all_products_collection_url }}" class="group cursor-pointer block">
-<div class="aspect-[3/4] overflow-hidden mb-4 rounded-lg bg-surface">
-<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Relaxed weekend wear in neutral earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_XtA6iyV2rTSg95LDOEVZpgH4m8OS9HMYSRcMMT4OcA1fnpvdo1WDZ6n9IfJ8awNKnoOCxiChsWY5MHZQAnJBjg3ibT0zfBs8wqlJsCdH5Db3vqHzkV-92KQ61XiRnavBR0LcV0PDs_ABUmRViQ2C7VSX4C5d-x5SLKtxVdssVwPQRjv2aKvErWUrvPVvr-HwY9HEh51Ad0mdyo0JANYbujL4QoD22Ra3lM-R-N0t4R-By_jQ_C-mv_Y9eBntwy5E4ZJPlvob85o">
+{% endif %}
 </div>
-<h4 class="serif-heading text-xl font-bold mb-1 group-hover:text-primary transition-colors">Weekend Essentials</h4>
-<p class="text-slate-500 text-sm font-medium uppercase tracking-wider">Relaxed sophistication</p>
+<h4 class="serif-heading text-xl font-bold mb-1 group-hover:text-primary transition-colors">{{ collection.title }}</h4>
+<p class="text-slate-500 text-sm font-medium uppercase tracking-wider">{{ collection.products_count }} products</p>
 </a>
-<!-- Collection Card 3 -->
-<a href="{{ routes.all_products_collection_url }}" class="group cursor-pointer block">
-<div class="aspect-[3/4] overflow-hidden mb-4 rounded-lg bg-surface">
-<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist foundational basics in premium fabrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjflTOHut7W9F7kpf6wrlrE_BkqPuAIRcUJF_XAbTdh8UizXw_9j3v8p5DeRUuK3eNdkzDz6MyTKogHz93IPj1NPZBLXEYv0KuKeuoVIDA5PYRYIAwyDFefT-qiCWrF1hNx_5qdGuAaEkMgtnApmMDu7KOCdXUOON8BD6b7uRNTETwtixSlj1Qy8IIi-2hv3oIZalaE2JFtgRdcOYGV7aWgl-YbQLx3KC69WW-jizU3FxZhan_I3cJhY1f5tM2A0_MW0QxxwzL-1E">
-</div>
-<h4 class="serif-heading text-xl font-bold mb-1 group-hover:text-primary transition-colors">The Foundations</h4>
-<p class="text-slate-500 text-sm font-medium uppercase tracking-wider">Everyday elevated basics</p>
-</a>
+{% endunless %}
+{% endfor %}
 </div>
 </section>
 

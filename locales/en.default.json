@@ -2,7 +2,50 @@
   "general": {
     "404": {
       "title": "404 Page Not Found",
-      "subtext": "The page you looking for doesn't exist."
+      "subtext": "The page you were looking for doesn't exist."
+    },
+    "search": {
+      "placeholder": "Search collection...",
+      "title": "Search",
+      "no_results": "No results found",
+      "results_count": "{{ count }} results"
+    },
+    "cart": {
+      "title": "Cart",
+      "empty": "Your cart is currently empty"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's Your Gift Card!",
+      "subtext": "Your gift card",
+      "code": "Gift card code",
+      "expired": "Expired",
+      "active": "Active",
+      "print": "Print"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "My Account"
+    },
+    "login": {
+      "title": "Login"
+    },
+    "register": {
+      "title": "Create Account"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Cart",
+      "sold_out": "Sold Out",
+      "quantity": "Quantity"
+    }
+  },
+  "blogs": {
+    "article": {
+      "read_more": "Read More"
     }
   }
 }

@@ -4,18 +4,31 @@
 </div>
 <div class="relative h-full flex flex-col items-center justify-center text-center px-6">
 <h2 class="serif-heading text-white text-5xl md:text-7xl mb-6 max-w-4xl leading-tight">
-                Crafted for the Life You're Building
+                {{ section.settings.heading | default: "Crafted for the Life You're Building" }}
             </h2>
 <p class="text-white text-lg md:text-xl font-light mb-10 max-w-2xl">
-                Elevated essentials designed for those who navigate the world with intentionality and ease.
+                {{ section.settings.subheading | default: "Elevated essentials designed for those who navigate the world with intentionality and ease." }}
             </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<a href="/collections/men" class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all text-center">
-                    Shop Men
-                </a>
-<a href="/collections/women" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all text-center">
-                    Shop Women
-                </a>
+{% if section.settings.button_1_collection != blank %}
+<a href="{{ section.settings.button_1_collection.url }}" class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all text-center">
+    {{ section.settings.button_1_text | default: "Shop Men" }}
+</a>
+{% else %}
+<a href="{{ routes.all_products_collection_url }}" class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all text-center">
+    {{ section.settings.button_1_text | default: "Shop Men" }}
+</a>
+{% endif %}
+
+{% if section.settings.button_2_collection != blank %}
+<a href="{{ section.settings.button_2_collection.url }}" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all text-center">
+    {{ section.settings.button_2_text | default: "Shop Women" }}
+</a>
+{% else %}
+<a href="{{ routes.all_products_collection_url }}" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white text-white px-10 py-4 rounded font-bold uppercase tracking-widest text-sm transition-all text-center">
+    {{ section.settings.button_2_text | default: "Shop Women" }}
+</a>
+{% endif %}
 </div>
 </div>
 </section>
@@ -30,6 +43,34 @@
       "id": "heading",
       "label": "Heading",
       "default": "Crafted for the Life You're Building"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Elevated essentials designed for those who navigate the world with intentionality and ease."
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Button 1 Text",
+      "default": "Shop Men"
+    },
+    {
+      "type": "collection",
+      "id": "button_1_collection",
+      "label": "Button 1 Collection"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Button 2 Text",
+      "default": "Shop Women"
+    },
+    {
+      "type": "collection",
+      "id": "button_2_collection",
+      "label": "Button 2 Collection"
     }
   ],
   "presets": [

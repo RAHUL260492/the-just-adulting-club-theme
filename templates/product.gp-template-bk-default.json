@@ -8,18 +8,18 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {
-    "main": {
-      "type": "main-product",
-      "settings": {}
-    },
-    "recs": {
-      "type": "product-recommendations",
-      "settings": {}
-    }
-  },
   "order": [
     "main",
     "recs"
-  ]
+  ],
+  "sections": {
+    "main": {
+      "settings": {},
+      "type": "main-product"
+    },
+    "recs": {
+      "settings": {},
+      "type": "product-recommendations"
+    }
+  }
 }

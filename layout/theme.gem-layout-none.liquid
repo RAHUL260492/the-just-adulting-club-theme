@@ -1,0 +1,51 @@
+{% comment %}
+	GEMPAGES BUILDER (https://apps.shopify.com/gempages)
+
+	You SHOULD NOT modify source code in this file because
+	It is automatically generated from GEMPAGES BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+  {{ content_for_header }}
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "{{ settings.color_primary | default: '#7b904c' }}",
+            "background-light": "{{ settings.color_background_light | default: '#FAF9F6' }}",
+            "background-dark": "{{ settings.color_background_dark | default: '#1a1c16' }}",
+            "surface": "{{ settings.color_surface | default: '#F5F1EB' }}",
+            "accent-text": "{{ settings.color_accent_text | default: '#2B2D2B' }}",
+            "brand-text": "#2B2D2B",
+            "brand-charcoal": "#2B2D2B"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "serif": ["Playfair Display", "serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}
+        }
+      }
+    };
+  </script>
+  
+  {{ 'critical.css' | asset_url | stylesheet_tag }}
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+</head>
+<body>
+<div class="gem-container">
+	{{ content_for_layout }}
+</div><!-- end .gem-container --></body>
+</html>
